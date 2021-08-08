@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Rubik:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+}
+button {
+    min-height: clamp(20px,30px,40px);
+    min-width: clamp(60px,80px,120px);
+    border-radius: 20px;
+    border: none;
+    background-color: #ABD2FA;
+    color: white;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.288);
+    cursor: pointer;
+}
+button:focus{
+    outline: none;
+}
+input {
+    min-height: clamp(30px,40px,60px);
+    min-width: clamp(160px,200px,220px);
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+}
+input:focus {
+    outline: none;
+    filter: drop-shadow(0 0 0.05rem rgba(0, 0, 0, 0.363));
+}
+
+#root {
+    height: 100vh;
+}
+
+/* *Component General Styling */
+.Small {
+    height: 90px;
+    width: 90px;
+}
+
+/* * Menu Container */
+.MenuContainer {
+    background-image: url('../../assets/General_Background.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #3D518C;
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+}
+
+.Hero > img {
+    height: clamp(140px, 150px, 200px);
+    width: clamp(140px, 150px, 200px);
+    margin: 10px auto;
+}
+.Hero > h1 {
+    margin: 10px auto;
+    text-align: center;
+    font-size: clamp(10px, 25px, 30px);
+}
+
+.HeroContainer{
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+}
+
+/* * Forms Styling */
+
+.InputContainer {
+    display: flex;
+    flex-flow: column;
+}
+.InputContainer > h1, button, input {
+    margin: 5px auto;
+}
+.InputContainer > p {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+    margin: auto;
+}
+
+.Form {
+    min-width: 35%;
+    padding: 20px;
+    border-radius: 80px 0 0 80px;
+    transition: 0.9s ease-in-out;
+    background-color: #3D518C;
+    display: flex;
+    flex-flow: column;
+}
+.Registration {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Login {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* * Dashboard Styling */
+
+.DashboardContainer {
+    height: 100vh;
+    background-color: #3D518C;
+    color: white;
+    display:flex;
+    flex-flow:row;
+}
+
+/* Side Panel Styling LeftPanel */
+
+.DashboardContainer > .SidePanel {
+    display: flex;
+    flex-flow:column;
+    background-color: #7692FF;
+    min-width: 25%;
+}
+
+.SidePanel > button {
+    background-color: rgba(255, 255, 255, 0);
+    height: 80px;
+    width: 80px;
+    margin: 2px auto;
+}
+
+.SidePanel button > img {
+    height: 80px;
+    width: 80px;
+}
+.SidePanel > h1 {
+    margin: 2px auto;
+}
+
+/* RightPanel Container Styling */
+.RightPanelContainer {
+    height: 100vh;
+    background-color: #3D518C;
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.RightPanelContainer > .Banner {
+    width: 100%;
+    padding: 20px;
+    background-image: url('../assets/General_Background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column;
+}
+
+.Banner > img {
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border-radius: 10000px;
+    margin: auto;
+}
+
+.Banner > h1 {
+    margin: auto;
+}
+
+
+/* * Alert Card 
+    A feature that might be implemented later on yessuh
+*/
+/* .AlertCard {
+    background-color: white;
+    min-height: 80px;
+    min-width: 160px;
+} */
+/* Breakpoint of Mobile devices */
+@media screen and (max-width: 500px){
+    .MenuContainer {
+        flex-flow: column;
+    }
+    .Form {
+        border-radius: 50px 50px 0 0;
+        min-height: 40%;
+    }
+}
