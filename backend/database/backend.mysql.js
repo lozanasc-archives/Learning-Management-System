@@ -1,10 +1,10 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 // Configuration object for MySQL
 const config = {
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'root',
     database: 'lms',
     multipleStatements: true 
 }
